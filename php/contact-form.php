@@ -8,9 +8,18 @@ function test_input($data) {
     return $data; 
 }
 
-$userEmail =  $age = $isBuyer = $contactMessage = $formError = "";
+$userName = $userEmail =  $age = $isBuyer = $contactMessage = $formError = "";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
+
+    if (!isset($_POST["userName"])) {
+        $formError = "Tu nombre es necesario";
+    } else {
+        $userName = test_input($_POST["userName"]);
+        if (!preg_match("/^[a-zA-Z ]*$/",$userName)) {
+            $formError['userName'] = "Solo letras y espacios en el nombre";
+        }
+    }
     
     if (!isset($_POST["email"])) {
         $formError = "Tu Email es necesario";
@@ -38,10 +47,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $dataResponse = array('type' => 'error', 'text' => $formError);
         echo json_encode($dataResponse);
     } else {
-        $name = "Interesado en Hood";
         $subject = "USUARIO INTERESADO EN USAR LA PLATAFORMA";
         $contactMessage = 
-            "<br><span style='color: #777777; font-weight: bold;'>Email:</span> " 
+            "<br><span style='color: #777777; font-weight: bold;'>Nombre:</span> "
+            . $userName
+            ."<br><span style='color: #777777; font-weight: bold;'>Email:</span> " 
             . $userEmail
             . "<br><span style='color: #777777; font-weight: bold;'>Edad:</span> " 
             . $age
@@ -49,7 +59,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             . $isBuyer
             . "<br>";
 
-        $dataResponse = send_form($userEmail, $name, $subject, $contactMessage);
+        $dataResponse = send_form($userEmail, $userName, $subject, $contactMessage);
 
         if ($dataResponse['type']=='error') 
             $dataResponse = array('type' => 'error', 'text' => 'Tu mensaje no pudo ser enviado, ponte en contacto con el equipo de soporte.');
