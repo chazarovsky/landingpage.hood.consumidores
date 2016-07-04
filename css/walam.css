@@ -7,8 +7,12 @@ body {
     font-weight: 300;
 }
 
-p {
+p, label {
     color: #888;
+}
+
+checkbox label {
+    font-weight: 300;
 }
 
 h1,

@@ -87,75 +87,75 @@ $('.twitter-feed').twittie({
 		/*********** Twitter Feeds Ends ************/
 /*********** google map ************/
 
-function initialize() {
-						      var location = new google.maps.LatLng(26.8542419, 75.8177054);
-						      var mapOptions = {
-						              center: location,
-						              scrollwheel: false,
-						              zoom: 14,
-						              /* colorize different sections of map */
-						              styles: [{
-						                      featureType: 'water',
-						                      stylers: [{
-						                              color: '#58B325'
-						                      }, {
-						                              visibility: 'on'
-						                      }]
-						              }, {
-						                      featureType: 'landscape',
-						                      stylers: [{
-						                              color: '#f2f2f2'
-						                      }]
-						              }, {
-						                      featureType: 'road',
-						                      stylers: [{
-						                              saturation: -90
-						                      }, {
-						                              lightness: 15
-						                      }]
-						              }, {
-						                      featureType: 'road.highway',
-						                      stylers: [{
-						                              visibility: 'simplified'
-						                      }]
-						              }, {
-						                      featureType: 'road.arterial',
-						                      elementType: 'labels.icon',
-						                      stylers: [{
-						                              visibility: 'off'
-						                      }]
-						              }, {
-						                      featureType: 'administrative',
-						                      elementType: 'labels.text.fill',
-						                      stylers: [{
-						                              color: '#444444'
-						                      }]
-						              }, {
-						                      featureType: 'transit',
-						                      stylers: [{
-						                              visibility: 'off'
-						                      }]
-						              }, {
-						                      featureType: 'poi',
-						                      stylers: [{
-						                              visibility: 'off'
-						                      }]
-						              }]
+//function initialize() {
+//						      var location = new google.maps.LatLng(26.8542419, 75.8177054);
+//						      var mapOptions = {
+//						              center: location,
+//						              scrollwheel: false,
+//						              zoom: 14,
+//						              /* colorize different sections of map */
+//						              styles: [{
+//						                      featureType: 'water',
+//						                      stylers: [{
+//						                              color: '#58B325'
+//						                      }, {
+//						                              visibility: 'on'
+//						                      }]
+//						              }, {
+//						                      featureType: 'landscape',
+//						                      stylers: [{
+//						                              color: '#f2f2f2'
+//						                      }]
+//						              }, {
+//						                      featureType: 'road',
+//						                      stylers: [{
+//						                              saturation: -90
+//						                      }, {
+//						                              lightness: 15
+//						                      }]
+//						              }, {
+//						                      featureType: 'road.highway',
+//						                      stylers: [{
+//						                              visibility: 'simplified'
+//						                      }]
+//						              }, {
+//						                      featureType: 'road.arterial',
+//						                      elementType: 'labels.icon',
+//						                      stylers: [{
+//						                              visibility: 'off'
+//						                      }]
+//						              }, {
+//						                      featureType: 'administrative',
+//						                      elementType: 'labels.text.fill',
+//						                      stylers: [{
+//						                              color: '#444444'
+//						                      }]
+//						              }, {
+//						                      featureType: 'transit',
+//						                      stylers: [{
+//						                              visibility: 'off'
+//						                      }]
+//						              }, {
+//						                      featureType: 'poi',
+//						                      stylers: [{
+//						                              visibility: 'off'
+//						                      }]
+//						              }]
+//						
+//						      };
+//						      var mapElement = document.getElementById('map-canvas');
+//						      var map = new google.maps.Map(mapElement, mapOptions);
+//						
+//						      <!-- panorama street view code -->
+//						      var panoramaOptions = {
+//						              position: location,
+//						              pov: {
+//						                      heading: 34,
+//						                      pitch: 10
+//						              }
+//						      };
+//						}
 						
-						      };
-						      var mapElement = document.getElementById('map-canvas');
-						      var map = new google.maps.Map(mapElement, mapOptions);
-						
-						      <!-- panorama street view code -->
-						      var panoramaOptions = {
-						              position: location,
-						              pov: {
-						                      heading: 34,
-						                      pitch: 10
-						              }
-						      };
-						}
-						
-						google.maps.event.addDomListener(window, 'load', initialize);
+//						google.maps.event.addDomListener(window, 'load', initialize);
 /*********** google map Ends ************/
     })(jQuery);
