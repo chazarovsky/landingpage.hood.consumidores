@@ -6,3 +6,15 @@ background-color: rgba (84,170,230,40);
 padding-left: 80px;
 padding-right: 80px;
 }
+.problem{
+    color: powderblue;
+    font-size: 13pt;
+    padding-left: 100px;
+    padding-right: 100px;
+    padding-bottom: 50px;
+    font-weight:200;
+    
+}
+.benefits{
+    padding-top: 50px;
+}
